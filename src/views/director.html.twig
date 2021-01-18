@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Director
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+	{% for director in director1 %}
+		<div class="card m-2 text-center shadow-sm">
+			<div class="card-body">
+				<h5 class="card-title">{{director.first_name}}
+					{{director.last_name}}</h5>
+				<a href="/Mvcobjet2/directors/{{director.id}}" class="btn m-2 btn-dark">Aller sur la fiche</a>
+			</div>
+		</div>
+	{% endfor %}
+	<h2 class="text-success">
+		{{director1.first_name}}
+		{{director1.last_name}}
+	</h2>
+{% endblock %}

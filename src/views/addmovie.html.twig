@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Add Movie
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+	<form class="w-75">
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input type="text" class="form-control" id="title">
+
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<input type="text" class="form-control" id="description">
+		</div>
+		<div class="form-group">
+			<label for="duration">Duration</label>
+			<input type="text" class="form-control" id="duration">
+		</div>
+		<div class="form-group">
+			<label for="date">Date</label>
+			<input type="date" class="form-control" id="date">
+		</div>
+		<div class="form-group">
+			<label for="img">Image</label>
+			<input type="text" class="form-control" id="img">
+		</div>
+		<div class="form-group">
+			<label for="duration">Duration</label>
+			<input type="text" class="form-control" id="duration">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+{% endblock %}

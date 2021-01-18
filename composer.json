@@ -1,0 +1,14 @@
+{
+    "name": "andy/mvcobjet2",
+    "type": "project",
+
+    "autoload": {
+        "psr-4": {
+            "Mvcobjet2\\": "src"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.2",
+        "klein/klein": "^2.1"
+    }
+}

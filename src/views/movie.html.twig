@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	Movie
+{% endblock %}
+{% block head %}{% endblock %}
+
+{% block content %}
+
+	{% for movie in movies %}
+		<div class="card m-2 text-center shadow" style="width: 25rem; height: 830px; ">
+			<div class="card-body d-flex flex-column align-items-center justify-content-around">
+				<img class="card-img-top" src="{{movie.cover_image}}" alt="Cover image">
+				<h5 class="card-title m-3">{{movie.title}}</h5>
+				<div class="d-inline-flex">
+					<h6 class="card-text m-1">Durée :
+						{{movie.duration}}</h6>
+					<h6 class="card-text m-1">Date :
+						{{movie.date}}</h6>
+				</div>
+				<p class="card-text">{{movie.description}}</p>
+				<a href="/Mvcobjet2/movies/{{movie.id}}" class="btn m-2 btn-dark">Aller sur la fiche</a>
+			</div>
+		</div>
+	{% endfor %}
+
+{% endblock %}

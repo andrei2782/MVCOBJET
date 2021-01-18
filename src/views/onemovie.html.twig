@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{movie.title}}
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+
+	<div class="card m-2 text-center shadow w-75 h-100">
+		<div class="card-body d-inline-flex  ">
+			<img class="card-img-top w-50" src="{{movie.cover_image}}" alt="Cover image">
+			<div class="d-flex flex-column justify-content-around align-items-center">
+				<h5 class="card-title m-3">{{movie.title}}</h5>
+				<div class="d-inline-flex">
+					<h6 class="card-text m-2">Actor :
+					{% for actors in movie.actors %}
+						{{movie.actors.first_name}}
+						{{movie.actors.last_name}}
+						{% endfor %}
+					</h6>
+					<h6 class="card-text m-2">Director :
+						{{movie.director.first_name}}
+						{{movie.director.last_name}}
+
+					</h6>
+				</div>
+				<h6 class="card-text m-2">Genre :
+					{{movie.genre.name}}
+				</h6>
+				<div class="d-inline-flex">
+					<h6 class="card-text m-2">Durée :
+						{{movie.duration}}
+					</h6>
+					<h6 class="card-text m-2">Date :
+						{{movie.date}}
+					</h6>
+				</div>
+				<div>
+					<h6 class="card-text ">
+						Description :
+					</h6>
+					<p class="card-text">
+						{{movie.description}}</p>
+				</div>
+				<a href="/Mvcobjet2/movies" class="btn m-2 btn-dark">Retour</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

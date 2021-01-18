@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+		<title>
+			{% block title %}MonSite
+			{% endblock %}
+		</title>
+		{% block head %}{% endblock %}
+	</head>
+	<body style="height: 100vh;">
+
+		<div class="navbar navbar-dark bg-dark shadow ">
+			<div class="d-inline-flex w-100  justify-content-center">
+				<a href="/Mvcobjet2" class="btn  m-2 border border-light bg-dark text-white">Acceuil</a>
+				<a href="/Mvcobjet2/movies" class="btn m-2 border border-light bg-dark text-white">Movie</a>
+				<a href="/Mvcobjet2/actors" class="btn m-2 border border-light bg-dark text-white">Actor</a>
+				<a href="/Mvcobjet2/directors" class="btn m-2 border border-light bg-dark text-white">Director</a>
+				<a href="/Mvcobjet2/addmovie" class="btn m-2 border border-light bg-dark text-white">AddOneMovie</a>
+			</div>
+		</div>
+
+
+		<div class="container mt-5  d-flex flex-wrap justify-content-center align-items-center" id="content"> {% block content %}{% endblock %}
+			</div>
+
+		</body>
+
+	</html>
